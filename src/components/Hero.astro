@@ -1,0 +1,223 @@
+---
+import { Button, Link } from '@nextui-org/react';
+import { Image } from 'astro:assets';
+import {  } from 'astro/components';
+
+import Accordion from '../components/Accordion.astro';
+import Miniatura1 from '../assets/miniatura1.jpg';
+import Miniatura2 from '../assets/miniatura2.b.jpg';
+import Miniatura3 from '../assets/miniatura3.jpg';
+import Miniatura6 from '../assets/miniatura6.jpg';
+import Miniatura7 from '../assets/miniatura7.jpg';
+import Instagram from '../assets/carrusel/Instagram.png';
+import Messenger from '../assets/carrusel/Messenger.png';
+import Llamada from '../assets/carrusel/Llamada.png';
+import Whatssap from '../assets/carrusel/whatsapp.png';
+import Web from '../assets/carrusel/Web.png';
+
+---
+
+<section class="pt-24 pb-20 text-white">
+   <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-6xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text pt-10 pb-5">
+            Triplica tus Ventas en 60 días con Ayuda de la Inteligencia Artificial
+          </h1>
+        
+          <p class="text-neutral-200 mb-8">
+            Automatiza tus procesos, libera tiempo y conquista a tus clientes con un
+            chatbot AI “ClickFlow” que trabaja 24/7 por ti, sin necesidad de contratar
+            más personal ni complicarte con tecnología
+          </p>
+         
+         <div class="flex justify-center mb-10">
+            <iframe 
+              src="https://vimeo.com/1045482526?share=copy" 
+              width="640" 
+              height="360" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowfullscreen>
+          </iframe>
+         </div>
+
+          <Button 
+            as="a" 
+            target="_blank"
+            className='relative z-50'
+            rel="noopener noreferrer" href="https://clickflow.efficore.cloud/registro" color="primary" client:visible>
+            ¡Quiero triplicar mis ventas ya!
+          </Button>
+        
+          <div class="line-one w-full h-10 z-20 relative"></div>
+        </div>
+
+        <div class="my-16 relative">
+          <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-white text-transparent bg-clip-text text-center">
+            Haz Más, en menos tiempo, con la Inteligencia Artificial
+          </h2>
+
+          <div class='absolute w-full h-full gradients-one flex justify-evenly items-center z-10'>
+            <div class='w-[250px] h-[250px] rounded-full bg-[#3730A3] blur-[250px]'></div>
+            <!-- <div class='w-[250px] h-[250px] rounded-full bg-[#B84234] blur-[250px]'></div> -->
+            <div class='w-[250px] h-[250px] rounded-full bg-[#06b6d4] blur-[250px]'></div>
+          </div>
+  
+          <p class="text-neutral-300 mb-12 text-center">
+            Aumenta tus ventas, reduce costos y sorprende a tus clientes con un sistema que trabaja por ti 24/7
+          </p>
+   
+          <div class="grid md:grid-cols-3 gap-6 mb-16 z-30 relative">
+            <div class="bg-neutral-950 rounded-lg p-4 flex flex-col items-center">
+              <Image src={Miniatura1} alt="Automatiza" class="rounded-lg mb-5 object-cover"/>
+              <h3 class="font-medium mb-3  capitalize">Automatiza todo, desde saludos hasta la venta</h3>
+              <p class="text-neutral-400 text-sm">ClickFlow maneja el 100% de las ventas. Responde consultas y hasta cierra transacciones.</p>
+            </div>
+            <div class="bg-neutral-950 rounded-lg p-4 flex flex-col items-center">
+              <Image src={Miniatura2} alt="Reduce costos" class="rounded-lg mb-5 object-cover"/>
+              <h3 class="font-medium mb-3  capitalize">Reduce costos sin comprometer la calidad</h3>
+              <p class="text-neutral-400 text-sm">Ahorra tiempo y dinero atendiendo a miles de clientes simultáneamente, sin pagar más sueldos.</p>
+            </div>
+            <div class="bg-neutral-950 rounded-lg p-4 flex flex-col items-center">
+              <Image src={Miniatura3} alt="Conecta" class="rounded-lg mb-5 object-cover h-[308px]" />
+              <h3 class="font-medium mb-3 capitalize">Conecta con tus clientes 365/24/7</h3>
+              <p class="text-neutral-400 text-sm">Siempre disponible para atender a tus clientes en el momento que lo necesiten, en TODOS TUS CANALES.</p>
+            </div>
+          </div>
+   
+          <div class="flex justify-center relative z-50">
+            <Button 
+              as="a" 
+              target="_blank"
+              rel="noopener noreferrer" href="https://clickflow.efficore.cloud/registro" color="primary" client:visible>
+              ¡Agenda tu demo gratis ahora!
+            </Button>
+          </div>
+        </div>
+ 
+        <div class="mb-8 text-center">
+          <!-- <h2 class="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text"> -->
+            <h2 class="text-4xl font-bold mb-12  text-white text-transparent bg-clip-text">
+            Transformamos la Forma en que Vendes y Conectas con tus Clientes
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-12 items-center">
+            <div class="text-left">
+              <h3 class="font-bold mb-2 bg-gradient-to-r from-purple-500 to-rose-500 text-transparent bg-clip-text pt-10 ">
+                Llega a Tus Clientes Donde Están:
+              </h3>
+              <p class="text-gray-400">WhatsApp, Instagram, Messenger, Web, Llamadas y Más</p>
+            </div>
+            <div class=" rounded-lg p-4">
+              <section class="splide" aria-label="Carousel">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <Image src={Instagram} alt="Conecta" class="rounded-lg mb-5 object-cover"  />
+                    </li> 
+                    <li class="splide__slide">
+                      <Image src={Messenger} alt="Conecta" class="rounded-lg mb-5 object-cover" />
+                    </li>
+                    <li class="splide__slide">
+                      <Image src={Llamada} alt="Conecta" class="rounded-lg mb-5 object-cover" />
+                    </li>
+                    <li class="splide__slide">
+                      <Image src={Whatssap} alt="Conecta" class="rounded-lg mb-5 object-cover" />
+                    </li>
+                    <li class="splide__slide">
+                      <Image src={Web} alt="Conecta" class="rounded-lg mb-5 object-cover" />
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+   
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+              <video controls width="500">
+                <source src="../src/assets/miniatura5.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+              </video>
+            <div class="text-left">
+              <h3 class="font-bold mb-2 bg-gradient-to-r from-red-500 to-orange-500 text-transparent bg-clip-text pt-10 ">
+                Cada Interacción Única, Justo Como Tus Clientes lo Merecen
+              </h3>
+              <p class="text-gray-400">Analiza cada conversación y ofrece respuestas personalizadas, creando experiencias inolvidables</p>
+            </div>
+          </div>
+   
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="text-left">
+              <h3 class="font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-transparent bg-clip-text pt-10 ">
+                Métricas que Hablan por Sí Solas
+              </h3>
+              <p class="text-gray-400">Conoce el impacto de cada interacción, tasas de conversión, tiempos de respuesta y más, en tiempo real.</p>
+            </div>
+            <Image src={Miniatura6} alt="Reduce costos" class="rounded-lg mb-5 object-cover"/>
+          </div>
+   
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+              <Image src={Miniatura7} alt="Reduce costos" class="rounded-lg mb-5 object-cover"/>
+
+            <div class="text-left">
+              <h3 class="font-bold mb-2 bg-gradient-to-r from-green-500 to-lime-500 text-transparent bg-clip-text pt-10 ">
+                Control Total de tus Chats con Nuestro CRM Integrado
+              </h3>
+              <p class="text-gray-400">Supervisa todas las conversaciones en un solo lugar. Vista centralizada, intervención en tiempo real e historial completo</p>
+            </div>
+          </div>
+   
+          <Button 
+            as="a" 
+            target="_blank"
+            className='relative z-50'
+            rel="noopener noreferrer" href="https://clickflow.efficore.cloud/registro" color="primary" client:visible>
+            ¡Quiero Automatizar Mi Negocio!
+          </Button>
+        </div>
+ 
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-8">
+            Historias Reales de Éxito con Nuestro Chatbot AI "ClickFlow"
+          </h2>
+          <div class="bg-gray-800/50 rounded-lg p-8">
+            [Breves citas con resultados específicos]
+            <p class="text-gray-400">Frases de clientes y logos de empresas</p>
+            <p class="text-sm text-gray-500">(Descubre más >> [Redirección a blog donde hay más info del caso de éxito])</p>
+          </div>
+        </div>
+
+        <Accordion/>
+   </div>
+ </section>
+
+ <style>
+  .line-one {
+    background: linear-gradient(90deg, #0c092d, #5a1765, #000 35% 65%, #5a1765, #0c092d);
+    filter: blur(25px);
+  }
+ </style>
+
+<style>
+  .splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<script>
+  import Splide from '@splidejs/splide';
+
+  new Splide('.splide', {
+    type: 'loop',
+    perPage: 1,
+    width: 200,
+      autoplay: true,
+    pauseOnHover: true,
+    interval: 3000,
+    arrows: true,
+    pagination: true,
+    gap: '1rem',
+  }).mount();
+</script>

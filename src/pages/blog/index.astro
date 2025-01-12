@@ -1,0 +1,118 @@
+---
+import { Input, Pagination } from "@nextui-org/react"
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const blogPosts = [
+  {
+    title: "Automatización de Ventas con IA",
+    description: "Descubre cómo la inteligencia artificial está transformando el proceso de ventas...",
+    image: "/api/placeholder/400/300",
+    category: "Automatización de ventas"
+  },
+  {
+    title: "Mejores Prácticas en ChatBots",
+    description: "Guía completa sobre cómo implementar chatbots efectivos en tu negocio...",
+    image: "/api/placeholder/400/300",
+    category: "Tendencias de IA"
+  },
+  {
+    title: "Caso de Éxito: Empresa X",
+    description: "Cómo una empresa aumentó sus ventas en un 300% con automatización...",
+    image: "/api/placeholder/400/300",
+    category: "Casos de éxito"
+  },
+  {
+    title: "Tendencias en IA para 2024",
+    description: "Las últimas innovaciones en inteligencia artificial para negocios...",
+    image: "/api/placeholder/400/300",
+    category: "Tendencias de IA"
+  },
+  {
+    title: "Guía de Integración CRM",
+    description: "Cómo integrar sistemas de IA con tu CRM existente...",
+    image: "/api/placeholder/400/300",
+    category: "Automatización de ventas"
+  },
+  {
+    title: "Optimización de Conversiones",
+    description: "Estrategias probadas para mejorar tus tasas de conversión...",
+    image: "/api/placeholder/400/300",
+    category: "Casos de éxito"
+  }
+];
+
+
+---
+
+<Layout title="Blog - Recursos y Consejos">
+  <Header />
+  
+  <main class="max-w-7xl mx-auto px-4 py-16">
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text pt-10 pb-5">
+        Recursos y Consejos para Automatizar y Escalar tu Negocio
+      </h1>
+
+      <p class="text-neutral-200 mb-8">
+        Explora nuestras guías, casos de éxito y tendencias sobre inteligencia artificial, automatización y ventas
+      </p>
+
+      <!-- Buscador -->
+      <div class="max-w-2xl mx-auto mb-12">
+        <div class="bg-neutral-900 p-6 rounded-lg">
+     
+          <Input
+          client:visible
+          classNames={{
+            base: "max-w-full h-10",
+            mainWrapper: "h-full",
+            input: "text-small",
+            inputWrapper:
+              "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+          }}
+          placeholder="Type to search..."
+          size="sm"
+          type="search"
+        />
+          <div class="mt-4 text-sm text-neutral-100">
+            <span class="font-semibold">CATEGORÍAS:</span> "Automatización de ventas", "Tendencias de IA", "Casos de éxito"
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid de Posts -->
+      <div class="grid md:grid-cols-2 gap-8">
+        {blogPosts.map((post) => (
+          <article class="bg-neutral-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+            {/* <img
+              src={post.image}
+              alt={post.title}
+              class="w-full h-48 object-cover"
+            /> */}
+            <div class="p-6">
+              <span class="text-sm text-blue-600 mb-2 inline-block">{post.category}</span>
+              <h2 class="text-xl font-bold mb-2 text-white">{post.title}</h2>
+              <p class="text-neutral-400 mb-4">{post.description}</p>
+              <a 
+                href="/page-blog
+                " 
+                class="text-blue-600 hover:text-blue-800 font-semibold inline-block"
+              >
+                LEER MÁS
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- Paginación -->
+      <div class="flex justify-center mt-12">
+        <Pagination client:visible initialPage={1} total={10} />
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

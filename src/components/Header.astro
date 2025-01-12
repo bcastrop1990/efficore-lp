@@ -1,0 +1,29 @@
+---
+import { Button } from "@nextui-org/react"
+---
+<header class="relative z-50">
+   <div class="max-w-7xl mx-auto px-4 py-4 backdrop-blur-sm fixed w-full top-0 bg-black/60">
+     <nav class="flex items-center justify-between">
+       <a href="/" class="hidden md:block">
+         <img src="/logo-header.png" alt="Efficore" class="h-16" />
+       </a>
+
+       <a href="/" class="flex items-center md:hidden">
+        <img src="/logo.png" alt="Efficore" class="h-10" />
+      </a>
+       <div class="flex items-center gap-8 text-sm">
+         <a href="/planes" class="text-neutral-200 hover:text-primary-blue transition-colors">Planes</a>
+         <a href="/blog" class="text-neutral-200 hover:text-primary-blue transition-colors">Blog</a>
+    
+         <Button 
+            as="a" 
+            target="_blank"
+            variant="shadow" 
+            className="bg-neutral-100 shadow-xl text-black"
+            rel="noopener noreferrer" href="https://clickflow.efficore.cloud/registro" client:visible>
+            Demo gratis
+          </Button>
+       </div>
+     </nav>
+   </div>
+</header>

@@ -1,0 +1,205 @@
+---
+import {Button} from '@nextui-org/react';
+import Accordion from './Accordion.astro';
+
+const plans = [
+  {
+    title: "PLAN BÁSICO",
+    subtitle: "Automatización inicial para pequeños negocios",
+    price: "$145/mes",
+    features: [
+      "1000 clientes mensuales",
+      "Messenger, Instagram y Web",
+      "Respuestas de texto automatizadas",
+      "Soporte técnico estándar",
+    ],
+  },
+  {
+    title: "PLAN PREMIUM",
+    subtitle: "Automatización total para empresas modernas",
+    price: "$290/mes",
+    features: [
+      "Clientes ilimitados",
+      "WhatsApp, Instagram, Messenger, Web y Llamadas Telefónicas",
+      "Acceso completo al CRM",
+      "Respuestas avanzadas (texto, imágenes, videos, audios y documentos)",
+      "Soporte técnico 24/7",
+    ],
+  },
+  {
+    title: "PLAN PROFESIONAL",
+    subtitle: "Funcionalidades avanzadas para negocios en crecimiento",
+    price: "$190/mes",
+    features: [
+      "3000 clientes mensuales",
+      "WhatsApp, Instagram, Messenger y Web",
+      "Respuestas de texto y multimedia",
+      "Acceso al CRM",
+      "Soporte técnico prioritario",
+    ],
+  },
+];
+
+const comparativeTable = [
+  {
+    aspect: "Costo Mensual",
+    human: "$1500+ (Salario y Beneficios)",
+    chatbot: "Desde $XX/mes"
+  },
+  {
+    aspect: "Disponibilidad",
+    human: "8 horas al día",
+    chatbot: "24/7"
+  },
+  {
+    aspect: "Capacidad de Respuesta",
+    human: "Limitada a una persona",
+    chatbot: "Miles de reacciones simultáneas"
+  },
+  {
+    aspect: "Eficiencia",
+    human: "Varía según experiencia",
+    chatbot: "Respuestas rápidas y consistentes"
+  },
+  {
+    aspect: "Personalización",
+    human: "Limitada por tiempo",
+    chatbot: "Basada en datos en tiempo real"
+  },
+  {
+    aspect: "Capacitación",
+    human: "Constante y costosa",
+    chatbot: "Incluida en el sistema"
+  }
+];
+---
+
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <div class="text-center mb-12">
+    <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text pt-10 pb-5">
+      Automatiza Tus Ventas y Ahorra Más que Contratando a un Vendedor
+    </h1>
+    <p class="text-neutral-200 mb-8">
+      Elige el plan que mejor se ajuste a las necesidades de tu negocio y empieza a vender más desde hoy
+    </p>
+
+    <Button 
+      as="a" 
+      target="_blank"
+      className='relative z-50'
+      rel="noopener noreferrer" href="https://clickflow.efficore.cloud/registro" color="primary" client:visible>
+      ¡Habla con un especialista ahora!
+    </Button>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8 mb-16">
+    {
+      plans.map((plan) => (
+        <div class="bg-neutral-900/70 rounded-lg p-6 hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-bold mb-2 text-center text-white">{plan.title}</h3>
+          <p class="text-neutral-400 text-center text-sm mb-4">{plan.subtitle}</p>
+          <p class="text-3xl font-medium mb-6 text-center">{plan.price}</p>
+
+          {/* <button class="w-full mb-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition-colors">
+            ¡Empezar!
+          </button> */}
+
+          <Button className='mb-8 bg-blue-600 hover:bg-blue-700 text-white w-full h-12' client:visible>Empezar</Button>
+
+          <ul class="space-y-3 mb-8">
+            {plan.features.map((feature) => (
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✓</span>
+                <span class="text-sm text-white">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        
+        </div>
+      ))
+    }
+  </div>
+
+  <div class="flex justify-center mb-8">
+    <h3 class="text-2xl font-bold mb-2 text-white text-center max-w-3xl">
+      Para Empresas con Necesidades Específicas que Buscan una Solución Hecha a Medida
+    </h3>
+  </div>
+
+  <div class="bg-neutral-900 rounded-lg p-8">
+    <div class="mb-6">
+      <h4 class="text-xl font-semibold mb-2 text-neutral-300">Enterprise Personalizado</h4>
+      <p class="text-gray-400 mb-4">Soluciones a medida para empresas únicas</p>
+      <ul class="space-y-2 text-white">
+        <li class="flex items-start">
+          <span class="text-green-500 mr-2">•</span>
+          Todo lo incluido en el plan PREMIUM más:
+        </li>
+        <li class="flex items-start ml-4">
+          <span class="text-green-500 mr-2">○</span>
+          Soluciones personalizadas según las necesidades específicas del cliente
+        </li>
+        <li class="flex items-start ml-4">
+          <span class="text-green-500 mr-2">○</span>
+          Integraciones avanzadas con sistemas existentes (ERP, CRM propio, etc.)
+        </li>
+        <li class="flex items-start ml-4">
+          <span class="text-green-500 mr-2">○</span>
+          Entrenamiento exclusivo para tu equipo
+        </li>
+        <li class="flex items-start ml-4">
+          <span class="text-green-500 mr-2">○</span>
+          Optimización continua: ajustes y mejoras basadas en resultados
+        </li>
+      </ul>
+    </div>
+
+
+ 
+    <Button 
+      as="a" 
+      target="_blank"
+      className='relative z-50 mb-8 flex flex-col h-16 w-1/3'
+      rel="noopener noreferrer" href="https://clickflow.efficore.cloud/registro" color="primary" client:visible>
+      <p>Hecho a tu medida</p>
+      <p>Agenda una llamada con un asesor</p>
+    </Button>
+  </div>
+
+  <!-- Nueva sección de comparativa -->
+  <div class="my-16">
+    <h2 class="text-3xl font-bold text-center mb-8 text-white">
+      ¿Qué es Mejor para Tu Negocio: Contratar a un Vendedor o Usar Nuestro Chatbot?
+    </h2>
+
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse bg-neutral-900 rounded-lg overflow-hidden shadow-lg">
+        <thead class="bg-neutral-800">
+          <tr>
+            <th class="px-6 py-4 text-left font-bold"></th>
+            <th class="px-6 py-4 text-left font-bold text-neutral-200">Vendedor Humano</th>
+            <th class="px-6 py-4 text-left font-bold text-neutral-200">Chatbot "EffiCore"</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comparativeTable.map((row) => (
+            <tr class="border-t">
+              <td class="px-6 py-4 font-medium text-neutral-200">{row.aspect}</td>
+              <td class="px-6 py-4 text-neutral-400">{row.human}</td>
+              <td class="px-6 py-4 text-blue-600">{row.chatbot}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Nueva sección de Preguntas Frecuentes -->
+  <div>
+    <h2 class="text-3xl font-bold text-center mb-8">
+      Preguntas Frecuentes
+    </h2>
+    
+    <Accordion/>
+  </div>
+</section>
